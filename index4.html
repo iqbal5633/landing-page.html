@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- =====================================================
+  DZURAGAN STORE - LANDING PAGE ALL IN ONE
+  Single File HTML
+  Mobile Friendly
+  RGB Animated UI
+===================================================== -->
+
+<title>Dzuragan Store</title>
+
+<!-- ================= GOOGLE FONT ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   RESET & GLOBAL
+===================================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#ffffff;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* =====================================================
+   ANIMATION BASE
+===================================================== */
+.fade-up{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp .8s ease forwards;
+}
+
+.delay-1{animation-delay:.2s}
+.delay-2{animation-delay:.4s}
+.delay-3{animation-delay:.6s}
+.delay-4{animation-delay:.8s}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* =====================================================
+   TOP MENU
+===================================================== */
+.top-menu{
+  position:sticky;
+  top:0;
+  z-index:999;
+  padding:12px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(10px);
+}
+
+.menu-box{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+
+.menu-item{
+  position:relative;
+  padding:10px 6px;
+  text-align:center;
+  font-size:.75rem;
+  font-weight:600;
+  color:#fff;
+  text-decoration:none;
+  border-radius:14px;
+  background:rgba(20,20,20,.85);
+  overflow:hidden;
+}
+
+/* RGB BORDER MENU */
+.menu-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:2px;
+  border-radius:14px;
+  background:linear-gradient(
+    120deg,
+    #ff004c,
+    #ff9f00,
+    #ffee00,
+    #00ff9d,
+    #00c3ff,
+    #7a00ff,
+    #ff004c
+  );
+  background-size:300%;
+  animation:rgbBorder 6s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+}
+
+.menu-item span{
+  position:relative;
+  z-index:2;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.hero{
+  padding:70px 20px 60px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:2.2rem;
+  font-weight:700;
+  line-height:1.3;
+}
+
+.hero h1 span{
+  background: linear-gradient(90deg,#00f2fe,#4facfe);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:1rem;
+  opacity:.9;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 30px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#00f2fe,#4facfe);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,255,255,.3);
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(0,255,255,.6);
+}
+
+/* =====================================================
+   SECTION GLOBAL
+===================================================== */
+.section{
+  padding:40px 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:1.2rem;
+  font-weight:600;
+}
+
+/* =====================================================
+   CARD GRID
+===================================================== */
+.cards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+/* =====================================================
+   CARD STYLE
+===================================================== */
+.card{
+  position:relative;
+  background:rgba(20,20,20,.85);
+  border-radius:20px;
+  padding:26px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+/* RGB BORDER CARD */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:2px;
+  border-radius:20px;
+  background:linear-gradient(
+    120deg,
+    #ff004c,
+    #ff9f00,
+    #ffee00,
+    #00ff9d,
+    #00c3ff,
+    #7a00ff,
+    #ff004c
+  );
+  background-size:300%;
+  animation:rgbBorder 6s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+}
+
+.card *{
+  position:relative;
+  z-index:2;
+}
+
+@keyframes rgbBorder{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* =====================================================
+   TESTIMONI
+===================================================== */
+.testimoni{
+  background:rgba(0,0,0,.25);
+  border-radius:18px;
+  padding:20px;
+}
+
+.testimoni h3{
+  font-size:1rem;
+}
+
+.bintang{
+  color:#ffd700;
+  font-size:.9rem;
+  margin:6px 0;
+}
+
+.testimoni p{
+  font-size:.9rem;
+  opacity:.9;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  font-size:.8rem;
+  opacity:.7;
+}
+
+/* =====================================================
+   END CSS (panjang biar mantap 😄)
+===================================================== */
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+   TOP NAVIGATION
+===================================================== -->
+<div class="top-menu fade-up">
+  <div class="menu-box">
+    <a href="#hero" class="menu-item"><span>Beranda</span></a>
+    <a href="#layanan" class="menu-item"><span>Layanan</span></a>
+    <a href="#testimoni" class="menu-item"><span>Testi</span></a>
+    <a href="https://wa.me/6281271617785" class="menu-item"><span>Hubungi</span></a>
+  </div>
+</div>
+
+<!-- =====================================================
+   HERO
+===================================================== -->
+<section class="hero fade-up" id="hero">
+  <h1>Dzuragan Store<br><span>v1</span></h1>
+  <p>
+    Kembangkan bisnismu dengan layanan website profesional,
+    nokos terpercaya, dan suntik sosial media cepat & aman.
+  </p>
+  <a href="https://wa.me/6281271617785" class="btn">
+    Hubungi Sekarang
+  </a>
+</section>
+
+<!-- =====================================================
+   LAYANAN
+===================================================== -->
+<section class="section" id="layanan">
+  <div class="section-title">Layanan Kami</div>
+
+  <div class="cards">
+    <div class="card fade-up delay-1">
+      <h3>Create a Website</h3>
+      <p>
+        Landing Page, Website Perusahaan,
+        Website Sekolah, Website Jualan,
+        dan kebutuhan custom lainnya.
+      </p>
+    </div>
+
+    <div class="card fade-up delay-2">
+      <h3>Order Nokos</h3>
+      <p>
+        Nokos WhatsApp, Telegram,
+        dan berbagai aplikasi lainnya.
+        Fast respon & ready stok.
+      </p>
+    </div>
+
+    <div class="card fade-up delay-3">
+      <h3>Suntik Sosial Media</h3>
+      <p>
+        Like, Views, Followers,
+        Subscribers, dan layanan boost lainnya.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   TESTIMONI
+===================================================== -->
+<section class="section" id="testimoni">
+  <div class="section-title">Testimoni Pelanggan</div>
+
+  <div class="cards">
+    <div class="card testimoni fade-up delay-1">
+      <h3>Rizky Pratama</h3>
+      <div class="bintang">★★★★★</div>
+      <p>
+        Website-nya keren, desain modern,
+        dan pengerjaan cepat. Mantap!
+      </p>
+    </div>
+
+    <div class="card testimoni fade-up delay-2">
+      <h3>Andi Saputra</h3>
+      <div class="bintang">★★★★★</div>
+      <p>
+        Nokos aman & langsung aktif.
+        Admin ramah dan fast respon.
+      </p>
+    </div>
+
+    <div class="card testimoni fade-up delay-3">
+      <h3>Siti Rahma</h3>
+      <div class="bintang">★★★★★</div>
+      <p>
+        Suntik sosmed beneran masuk,
+        akun jadi keliatan profesional.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   FOOTER
+===================================================== -->
+<div class="footer">
+  © 2026 Dzuragan Store • All Rights Reserved
+</div>
+
+</body>
+</html>
