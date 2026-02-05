@@ -15,18 +15,40 @@ background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:#fff;min-height:100vh;overflow-x:hidden
 }
 
+/* CONTAINER */
+.container{max-width:1100px;margin:auto}
+
 /* ANIMATION */
 .fade-up{opacity:0;transform:translateY(40px);animation:fadeUp .8s ease forwards}
-.delay-1{animation-delay:.2s}.delay-2{animation-delay:.4s}.delay-3{animation-delay:.6s}
+.delay-1{animation-delay:.2s}
+.delay-2{animation-delay:.4s}
+.delay-3{animation-delay:.6s}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 
 /* TOP MENU */
-.top-menu{position:sticky;top:0;z-index:999;padding:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(10px)}
-.menu-box{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.menu-item{
-position:relative;padding:10px 6px;text-align:center;font-size:.75rem;font-weight:600;
-color:#fff;text-decoration:none;border-radius:14px;background:rgba(20,20,20,.85);overflow:hidden
+.top-menu{
+position:sticky;top:0;z-index:999;
+padding:12px;background:rgba(0,0,0,.55);
+backdrop-filter:blur(10px)
 }
+.menu-box{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px
+}
+.menu-item{
+position:relative;
+padding:10px 6px;
+text-align:center;
+font-size:.8rem;
+font-weight:600;
+color:#fff;text-decoration:none;
+border-radius:14px;
+background:rgba(20,20,20,.85);
+overflow:hidden;
+transition:.2s
+}
+.menu-item:hover{transform:translateY(-2px)}
 .menu-item::before{
 content:"";position:absolute;inset:0;padding:2px;border-radius:14px;
 background:linear-gradient(120deg,#ff004c,#ff9f00,#ffee00,#00ff9d,#00c3ff,#7a00ff,#ff004c);
@@ -35,38 +57,91 @@ background-size:300%;animation:rgbBorder 6s linear infinite;
 -webkit-mask-composite:xor;mask-composite:exclude
 }
 .menu-item span{position:relative;z-index:2}
-@keyframes rgbBorder{0%{background-position:0%}50%{background-position:100%}100%{background-position:0%}}
+@keyframes rgbBorder{
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
+}
 
 /* HERO */
-.hero{padding:70px 20px 60px;text-align:center}
-.hero h1{font-size:2.2rem;font-weight:700}
-.hero span{background:linear-gradient(90deg,#00f2fe,#4facfe);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{margin-top:15px;font-size:1rem;opacity:.9}
+.hero{
+padding:90px 20px 70px;
+text-align:center
+}
+.hero h1{
+font-size:clamp(1.8rem,3vw,2.6rem);
+font-weight:700
+}
+.hero span{
+background:linear-gradient(90deg,#00f2fe,#4facfe);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent
+}
+.hero p{
+margin-top:15px;
+font-size:clamp(.95rem,1.5vw,1.05rem);
+opacity:.9;
+max-width:600px;
+margin-inline:auto
+}
 
 /* BUTTON */
 .btn{
-display:block;margin:20px auto 0;padding:14px 30px;border-radius:30px;
+display:inline-block;
+margin:18px 8px 0;
+padding:14px 30px;
+border-radius:30px;
 background:linear-gradient(90deg,#00f2fe,#4facfe);
-color:#000;font-weight:600;text-decoration:none;
-box-shadow:0 10px 30px rgba(0,255,255,.3);transition:.3s;width:fit-content
+color:#000;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,255,255,.3);
+transition:.25s
 }
-.btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,255,255,.6)}
-
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 40px rgba(0,255,255,.6)
+}
 .btn-group{
 background:linear-gradient(90deg,#25D366,#00ff9d);
 box-shadow:0 10px 30px rgba(37,211,102,.35)
 }
 
 /* SECTION */
-.section{padding:40px 20px}
-.section-title{text-align:center;margin-bottom:20px;font-size:1.2rem;font-weight:600}
+.section{padding:60px 20px}
+.section-title{
+text-align:center;
+margin-bottom:30px;
+font-size:1.4rem;
+font-weight:600
+}
+
+/* CARD GRID */
+.cards{
+display:grid;
+grid-template-columns:1fr;
+gap:18px
+}
+
+/* DESKTOP GRID */
+@media(min-width:700px){
+.cards{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:1024px){
+.cards{grid-template-columns:repeat(3,1fr)}
+}
 
 /* CARD */
-.cards{display:grid;gap:14px}
 .card{
-position:relative;background:rgba(20,20,20,.85);border-radius:20px;
-padding:26px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.35)
+position:relative;
+background:rgba(20,20,20,.85);
+border-radius:20px;
+padding:28px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+transition:.25s
 }
+.card:hover{transform:translateY(-5px)}
 .card::before{
 content:"";position:absolute;inset:0;padding:2px;border-radius:20px;
 background:linear-gradient(120deg,#ff004c,#ff9f00,#ffee00,#00ff9d,#00c3ff,#7a00ff,#ff004c);
@@ -77,11 +152,24 @@ background-size:300%;animation:rgbBorder 6s linear infinite;
 .card *{position:relative;z-index:2}
 
 /* TESTI */
-.testimoni{background:rgba(0,0,0,.25);border-radius:18px;padding:20px}
-.bintang{color:#ffd700;font-size:.9rem;margin:6px 0}
+.testimoni{
+background:rgba(0,0,0,.25);
+border-radius:18px;
+padding:20px
+}
+.bintang{
+color:#ffd700;
+font-size:.95rem;
+margin:6px 0
+}
 
 /* FOOTER */
-.footer{text-align:center;padding:30px 20px;font-size:.8rem;opacity:.7}
+.footer{
+text-align:center;
+padding:40px 20px;
+font-size:.85rem;
+opacity:.7
+}
 </style>
 </head>
 
@@ -89,7 +177,7 @@ background-size:300%;animation:rgbBorder 6s linear infinite;
 
 <!-- MENU -->
 <div class="top-menu fade-up">
-<div class="menu-box">
+<div class="menu-box container">
 <a href="#hero" class="menu-item"><span>Beranda</span></a>
 <a href="#layanan" class="menu-item"><span>Layanan</span></a>
 <a href="#testimoni" class="menu-item"><span>Testi</span></a>
@@ -98,27 +186,22 @@ background-size:300%;animation:rgbBorder 6s linear infinite;
 </div>
 
 <!-- HERO -->
-<section class="hero fade-up" id="hero">
-<h1>Dzuragan Store<br><span>v1</span></h1>
+<section class="hero fade-up container" id="hero">
+<h1>Dzuragan Store <br><span>v1</span></h1>
 <p>Kembangkan bisnismu dengan layanan website profesional, nokos terpercaya, dan suntik sosial media cepat & aman.</p>
 
 <a href="https://wa.me/6281271617785" class="btn">Hubungi Sekarang</a>
-
-<a href="https://chat.whatsapp.com/DvgJKwI6MPbJUUwOhbhjLp?mode=gi_t" 
-class="btn btn-group" target="_blank">
-Join Grup WhatsApp
-</a>
-
+<a href="https://chat.whatsapp.com/DvgJKwI6MPbJUUwOhbhjLp?mode=gi_t" class="btn btn-group" target="_blank">Join Grup WhatsApp</a>
 </section>
 
 <!-- LAYANAN -->
-<section class="section" id="layanan">
+<section class="section container" id="layanan">
 <div class="section-title">Layanan Kami</div>
-<div class="cards">
 
+<div class="cards">
 <div class="card fade-up delay-1">
 <h3>Create a Website</h3>
-<p>Landing Page, Website Perusahaan, Website Sekolah, Website Jualan, dan kebutuhan custom lainnya.</p>
+<p>Landing Page, Website Perusahaan, Website Sekolah, Website Jualan, dan custom sesuai kebutuhan.</p>
 </div>
 
 <div class="card fade-up delay-2">
@@ -130,33 +213,31 @@ Join Grup WhatsApp
 <h3>Suntik Sosial Media</h3>
 <p>Like, Views, Followers, Subscribers, dan layanan boost lainnya.</p>
 </div>
-
 </div>
 </section>
 
 <!-- TESTIMONI -->
-<section class="section" id="testimoni">
-<div class="section-title">Testimoni Pelanggan</div>
-<div class="cards">
+<section class="section container" id="testimoni">
+<div class="section-title">Testimoni Pelanggan Top</div>
 
+<div class="cards">
 <div class="card testimoni fade-up delay-1">
-<h3>Rizky Pratama</h3>
+<h3>Buyer Create Website</h3>
 <div class="bintang">★★★★★</div>
-<p>Website-nya keren, desain modern, dan pengerjaan cepat. Mantap!</p>
+<p>Website-nya keren, desain modern, dan pengerjaan cepat.</p>
 </div>
 
 <div class="card testimoni fade-up delay-2">
-<h3>Andi Saputra</h3>
+<h3>Buyer Order Nokos</h3>
 <div class="bintang">★★★★★</div>
-<p>Nokos aman & langsung aktif. Admin ramah dan fast respon.</p>
+<p>Nokos aman & langsung aktif. Admin fast respon.</p>
 </div>
 
 <div class="card testimoni fade-up delay-3">
-<h3>Siti Rahma</h3>
+<h3>Buyer Suntik Sosial Media</h3>
 <div class="bintang">★★★★★</div>
-<p>Suntik sosmed beneran masuk, akun jadi keliatan profesional.</p>
+<p>Suntik sosmed real masuk, akun jadi lebih profesional.</p>
 </div>
-
 </div>
 </section>
 
