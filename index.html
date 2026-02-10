@@ -1,310 +1,222 @@
 <!DOCTYPE html>
 <html lang="id-ID">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DzuraganStore.id- Jasa Pembuatan Website Profesional</title>
-    
-    <!-- Meta Tag SEO -->
-    <meta name="description" content="Jasa pembuatan website responsive, cepat, dan profesional untuk bisnis Anda. Buat website perusahaan, toko online, atau blog dengan harga terjangkau di Indonesia.">
-    <meta name="keywords" content="jasa pembuatan website, website perusahaan, toko online, jasa web developer, pembuatan website murah, website responsive, jasa website Indonesia">
-    <meta name="author" content="DigitalSite.id">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph & Twitter Card -->
-    <meta property="og:title" content="DigitalSite.id - Jasa Pembuatan Website Profesional">
-    <meta property="og:description" content="Jasa pembuatan website responsive, cepat, dan profesional untuk bisnis Anda.">
-    <meta property="og:image" content="assets/og-image.png">
-    <meta property="og:url" content="https://digitalsite.id">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- CSS Eksternal -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DzuraganStore.id - Jasa Pembuatan Website Profesional</title>
+
+<!-- SEO Meta -->
+<meta name="description" content="Jasa pembuatan website responsive, cepat, dan profesional untuk bisnis Anda. Buat website perusahaan, toko online, atau blog dengan harga terjangkau di Indonesia.">
+<meta name="keywords" content="jasa pembuatan website, website perusahaan, toko online, jasa web developer, pembuatan website murah, website responsive, jasa website Indonesia">
+<meta name="author" content="DzuraganStore.id">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="DzuraganStore.id - Jasa Pembuatan Website Profesional">
+<meta property="og:description" content="Jasa pembuatan website responsive, cepat, dan profesional untuk bisnis Anda.">
+<meta property="og:url" content="https://dzuraganstore.id">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon" href="assets/favicon.png" type="image/png">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ========== NAVBAR ========== -->
-    <nav id="navbar">
-        <div class="container nav-wrapper">
-            <a href="#home" class="logo">
-                <i class="fas fa-globe"></i>
-                Dzuragan<span>Store</span>
-            </a>
-            
-            <div class="nav-links" id="navLinks">
-                <a href="#home">Beranda</a>
-                <a href="#services">Layanan</a>
-                <a href="#advantages">Keunggulan</a>
-                
-                <a href="#pricing">Paket Harga</a>
-                
-            </div>
-            
-            <div class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-            <script>
-    // Ambil elemen menu toggle dan nav-links
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
 
-    // Pastikan elemen ditemukan sebelum menambahkan event listener
-    if(menuToggle && navLinks){
-        menuToggle.addEventListener('click', function() {
-            // Toggle class 'show' untuk nav-links
-            navLinks.classList.toggle('show');
-        });
-    }
+<!-- ===== HEADER / NAVBAR ===== -->
+<header>
+<nav id="navbar">
+  <div class="container nav-wrapper">
+    <a href="#home" class="logo">
+      <i class="fas fa-globe" aria-hidden="true"></i>
+      Dzuragan<span>Store</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#services">Layanan</a></li>
+      <li><a href="#advantages">Keunggulan</a></li>
+      <li><a href="#pricing">Paket Harga</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<main>
+<section class="hero" id="home">
+  <div class="container hero-wrapper">
+    <div class="hero-content">
+      <h1 class="hero-title">Website Profesional untuk <span>Bisnis yang Berkembang</span></h1>
+      <p class="hero-desc">Kami membuat website cepat, responsive, dan menarik agar bisnis Anda tampil profesional di dunia digital.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20membuat%20website" class="btn btn-primary" target="_blank" aria-label="Buat Website Sekarang">Buat Website Sekarang</a>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20melihat%20layanan%20Anda" class="btn btn-secondary" target="_blank" aria-label="Lihat Layanan Kami">Lihat Layanan Kami</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">300+</span>
+          <span class="stat-text">Proyek Selesai</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">97%</span>
+          <span class="stat-text">Pelanggan Puas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">8 Tahun</span>
+          <span class="stat-text">Pengalaman</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Layanan Pembuatan Website Kami</h2>
+      <p class="section-subtitle">Solusi website yang disesuaikan dengan kebutuhan bisnis Anda</p>
+    </header>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon"><i class="fas fa-building" aria-hidden="true"></i></div>
+        <h3 class="service-title">Website Perusahaan</h3>
+        <p class="service-desc">Website resmi perusahaan yang mencerminkan identitas brand dan meningkatkan kredibilitas bisnis Anda.</p>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20membuat%20Website%20Perusahaan" class="btn btn-outline" target="_blank">Detail Layanan</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon"><i class="fas fa-shopping-bag" aria-hidden="true"></i></div>
+        <h3 class="service-title">Toko Online</h3>
+        <p class="service-desc">Website toko online yang mudah digunakan, aman, dan dioptimalkan untuk meningkatkan penjualan produk Anda.</p>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20membuat%20Toko%20Online" class="btn btn-outline" target="_blank">Detail Layanan</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon"><i class="fas fa-blog" aria-hidden="true"></i></div>
+        <h3 class="service-title">Website Blog</h3>
+        <p class="service-desc">Platform konten yang menarik, mudah diperbarui, dan SEO-friendly agar lebih banyak pembaca.</p>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20membuat%20Website%20Blog" class="btn btn-outline" target="_blank">Detail Layanan</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon"><i class="fas fa-clinic-medical" aria-hidden="true"></i></div>
+        <h3 class="service-title">Website Profesional</h3>
+        <p class="service-desc">Website untuk profesional seperti dokter, pengacara, fotografer, dengan tampilan mewakili keahlian Anda.</p>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20membuat%20Website%20Profesional" class="btn btn-outline" target="_blank">Detail Layanan</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ADVANTAGES ===== -->
+<section class="advantages" id="advantages">
+  <div class="container advantage-wrapper">
+    <div class="advantage-content">
+      <h2 class="section-title">Mengapa Memilih Kami?</h2>
+      <p class="section-subtitle">Kami memberikan nilai lebih untuk bisnis Anda dengan solusi website yang handal</p>
+      <div class="advantage-list">
+        <div class="advantage-item">
+          <i class="fas fa-check-circle" aria-hidden="true"></i>
+          <div>
+            <h3>Desain Modern & Menarik</h3>
+            <p>Tampilan website sesuai tren terkini, mencerminkan karakter bisnis Anda.</p>
+          </div>
+        </div>
+        <div class="advantage-item">
+          <i class="fas fa-bolt" aria-hidden="true"></i>
+          <div>
+            <h3>Kecepatan Loading Tinggi</h3>
+            <p>Website cepat dibuka agar pengunjung tidak bosan dan meningkatkan peringkat SEO.</p>
+          </div>
+        </div>
+        <div class="advantage-item">
+          <i class="fas fa-shield-alt" aria-hidden="true"></i>
+          <div>
+            <h3>Keamanan Terjamin</h3>
+            <p>Perlindungan dari malware dan peretasan dengan sistem keamanan terbaru.</p>
+          </div>
+        </div>
+        <div class="advantage-item">
+          <i class="fas fa-headset" aria-hidden="true"></i>
+          <div>
+            <h3>Dukungan 24/7</h3>
+            <p>Tim siap membantu Anda setiap saat jika ada masalah dengan website.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Paket Harga Website</h2>
+      <p class="section-subtitle">Pilihan paket sesuai kebutuhan dan anggaran bisnis Anda</p>
+    </header>
+    <div class="pricing-grid">
+      <!-- Paket Low -->
+      <article class="pricing-card">
+        <h3 class="pricing-title">Paket Low</h3>
+        <p class="pricing-price"><span class="price">Rp 150.000</span> / Satu Kali</p>
+        <ul class="pricing-features">
+          <li>1 Halaman Website</li>
+          <li>Desain Responsive</li>
+          <li>Form Kontak Dasar</li>
+          <li>Free Hosting Permanent</li>
+          <li>Optimasi SEO Dasar</li>
+        </ul>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20memilih%20Paket%20Low" class="btn btn-primary" target="_blank">Pilih Paket</a>
+      </article>
+      <!-- Paket Medium -->
+      <article class="pricing-card featured">
+        <div class="featured-badge">Paling Populer</div>
+        <h3 class="pricing-title">Paket Medium</h3>
+        <p class="pricing-price"><span class="price">Rp 800.000</span> / Satu Kali</p>
+        <ul class="pricing-features">
+          <li>1-10 Halaman Website</li>
+          <li>Desain Premium Responsive</li>
+          <li>Free Hosting Permanent</li>
+          <li>Optimasi SEO Menengah</li>
+        </ul>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20memilih%20Paket%20Medium" class="btn btn-primary" target="_blank">Pilih Paket</a>
+      </article>
+      <!-- Paket High -->
+      <article class="pricing-card">
+        <h3 class="pricing-title">Paket High</h3>
+        <p class="pricing-price"><span class="price">Rp 1.000.000</span> / Satu Kali</p>
+        <ul class="pricing-features">
+          <li>1-50 Halaman Website</li>
+          <li>Desain Premium Responsive</li>
+          <li>Free Hosting Permanent</li>
+          <li>Optimasi SEO Tinggi</li>
+        </ul>
+        <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20memilih%20Paket%20High" class="btn btn-primary" target="_blank">Pilih Paket</a>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
 </script>
 
-        </div>
-    </nav>
-
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero" id="home">
-        <div class="container hero-wrapper">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Website Profesional untuk <span>Bisnis yang Berkembang</span>
-                </h1>
-                <p class="hero-desc">
-                    Kami membuat website yang cepat, responsive, dan menarik agar bisnis Anda tampil profesional di dunia digital.
-                </p>
-                <div class="hero-buttons">
-                    <a href="https://wa.me/6283199137512?text=Halo%20DzuraganStore,%20saya%20ingin%20membuat%20website" class="btn btn-primary" target="_blank" id="waBtn">Buat Website Sekarang</a>
-                    <a href="#services" class="btn btn-secondary">Lihat Layanan Kami</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">300+</span>
-                        <span class="stat-text">Proyek Selesai</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">97%</span>
-                        <span class="stat-text">Pelanggan Puas</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">8 Tahun</span>
-                        <span class="stat-text">Pengalaman</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <div class="Logo">
-                    <img src="">
-                    <div class="glow-effect"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SERVICES SECTION ========== -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Layanan Pembuatan Website Kami</h2>
-                <p class="section-subtitle">Solusi website yang disesuaikan dengan kebutuhan bisnis Anda</p>
-            </div>
-            
-            <div class="services-grid">
-                <!-- Layanan 1 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="service-title">Website Perusahaan</h3>
-                    <p class="service-desc">Website resmi perusahaan yang mencerminkan identitas brand dan meningkatkan kredibilitas bisnis Anda.</p>
-                    <a href="#contact" class="btn btn-outline">Detail Layanan</a>
-                </div>
-                
-                <!-- Layanan 2 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <h3 class="service-title">Toko Online</h3>
-                    <p class="service-desc">Website toko online yang mudah digunakan, aman, dan dioptimalkan untuk meningkatkan penjualan produk Anda.</p>
-                    <a href="#contact" class="btn btn-outline">Detail Layanan</a>
-                </div>
-                
-                <!-- Layanan 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-blog"></i>
-                    </div>
-                    <h3 class="service-title">Website Blog</h3>
-                    <p class="service-desc">Platform konten yang menarik, mudah diperbarui, dan dioptimalkan untuk mesin pencari agar lebih banyak pembaca.</p>
-                    <a href="#contact" class="btn btn-outline">Detail Layanan</a>
-                </div>
-                
-                <!-- Layanan 4 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-clinic-medical"></i>
-                    </div>
-                    <h3 class="service-title">Website Profesional</h3>
-                    <p class="service-desc">Website untuk dokter, pengacara, fotografer, dan profesional lainnya dengan tampilan yang mewakili keahlian Anda.</p>
-                    <a href="#contact" class="btn btn-outline">Detail Layanan</a>
-                </div>
-                
-                <!-- Layanan 5 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="service-title">Website Responsive</h3>
-                    <p class="service-desc">Optimisasi website agar tampil sempurna di semua perangkat: HP, tablet, laptop, dan desktop.</p>
-                    <a href="#contact" class="btn btn-outline">Detail Layanan</a>
-                </div>
-                
-                <!-- Layanan 6 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                    <h3 class="service-title">Optimasi SEO</h3>
-                    <p class="service-desc">Meningkatkan peringkat website di Google agar lebih mudah ditemukan oleh pelanggan potensial.</p>
-                    <a href="#contact" class="btn btn-outline">Detail Layanan</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== ADVANTAGES SECTION ========== -->
-    <section class="advantages" id="advantages">
-        <div class="container advantage-wrapper">
-        
-                </div>
-            </div>
-            
-            <div class="advantage-content">
-                <h2 class="section-title">Mengapa Memilih Kami?</h2>
-                <p class="section-subtitle">Kami memberikan nilai lebih untuk bisnis Anda dengan solusi website yang handal</p>
-                
-                <div class="advantage-list">
-                    <div class="advantage-item">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h4>Desain Modern & Menarik</h4>
-                            <p>Tampilan website yang sesuai dengan tren terkini dan mencerminkan karakter bisnis Anda.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="advantage-item">
-                        <i class="fas fa-bolt"></i>
-                        <div>
-                            <h4>Kecepatan Loading Tinggi</h4>
-                            <p>Website yang cepat dibuka agar tidak membuat pengunjung bosan dan meningkatkan peringkat SEO.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="advantage-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <div>
-                            <h4>Keamanan Terjamin</h4>
-                            <p>Perlindungan dari serangan malware dan peretasan dengan sistem keamanan terbaru.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="advantage-item">
-                        <i class="fas fa-headset"></i>
-                        <div>
-                            <h4>Dukungan 24/7</h4>
-                            <p>Tim teknisi siap membantu Anda setiap saat jika ada masalah dengan website Anda.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="advantage-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <div>
-                            <h4>Harga Terjangkau</h4>
-                            <p>Paket harga yang fleksibel dan sesuai dengan anggaran bisnis Anda tanpa mengorbankan kualitas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- ========== PRICING SECTION ========== -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Paket Harga Website</h2>
-                <p class="section-subtitle">Pilihan paket yang disesuaikan dengan kebutuhan dan anggaran bisnis Anda</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <!-- Paket Dasar -->
-                <div class="pricing-wrapper">
-    <!-- Paket Low -->
-    <div class="pricing-card">
-        <div class="pricing-header">
-            <h3 class="pricing-title">Paket Low</h3>
-            <div class="pricing-price">
-                <span class="price">Rp 150.000</span>
-                <span class="period">/ Satu Kali</span>
-            </div>
-        </div>
-        <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> 1 Halaman Website</li>
-            <li><i class="fas fa-check"></i> Desain Responsive</li>
-            <li><i class="fas fa-check"></i> Form Kontak Dasar</li>
-            <li><i class="fas fa-check"></i> Free Hosting Permanent</li>
-            <li><i class="fas fa-check"></i> Optimasi SEO Dasar</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline">Pilih Paket</a>
-    </div>
-
-    <!-- Paket Medium -->
-    <div class="pricing-card featured">
-        <div class="featured-badge">Paling Populer</div>
-        <div class="pricing-header">
-            <h3 class="pricing-title">Paket Medium</h3>
-            <div class="pricing-price">
-                <span class="price">Rp 800.000</span>
-                <span class="period">/ Satu Kali</span>
-            </div>
-        </div>
-        <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> 1-10 Halaman Website</li>
-            <li><i class="fas fa-check"></i> Desain Premium Responsive</li>
-            <li><i class="fas fa-check"></i> Free Hosting Permanent</li>
-            <li><i class="fas fa-check"></i> Optimasi SEO Menengah</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary">Pilih Paket</a>
-    </div>
-
-    <!-- Paket High -->
-    <div class="pricing-card">
-        <div class="pricing-header">
-            <h3 class="pricing-title">Paket High</h3>
-            <div class="pricing-price">
-                <span class="price">Rp 1.000.000</span> <!-- Bisa sesuaikan harga -->
-                <span class="period">/ Satu Kali</span>
-            </div>
-        </div>
-        <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> 1-50 Halaman Website</li>
-            <li><i class="fas fa-check"></i> Desain Premium Responsive</li>
-            <li><i class="fas fa-check"></i> Free Hosting Permanent</li>
-            <li><i class="fas fa-check"></i> Optimasi SEO Tinggi</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline">Pilih Paket</a>
-    </div>
-    
-                  </html>
+</body>
+</html>
